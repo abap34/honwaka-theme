@@ -1,0 +1,70 @@
+/* @theme honwaka */
+
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap');
+
+
+:root {
+    --black: #000009;
+    --white: #ffffff;
+    --gray: #808080;
+    --first: SteelBlue;
+    --second: #ff0000;
+}
+
+section {
+    font-family: 'M PLUS 1p';
+    color: var(--black);
+}
+
+h1 {
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5em;
+}
+
+section.lead {
+    color: var(--first);
+}
+
+section.lead h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    color: var(--first);
+}
+
+section.lead h2 {
+    font-size: 1em;
+    margin-top: 0.05em;
+    font-weight: bold;
+    text-align: cente
+}
+
+section.lead p {
+    text-align: right;
+}
+
+section::after {
+    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+}
+
+header {
+    font-family: 'M PLUS 1p:wght@700';
+    font-weight: bold;
+    font-size: 1.5em;
+    color: var(--first);
+    top: 30px;
+    border-bottom: 5px dotted
+}
+
+.def {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border: 1px solid #ccc;
+    background-color: #e0f2f1;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
