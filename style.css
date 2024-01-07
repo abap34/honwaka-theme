@@ -62,8 +62,9 @@ header {
     border-bottom: 5px dotted
 }
 
+
+
 .def {
-    background-color: #f0f0f0;
     padding: 30px 50px 30px 50px;
     border: 1px solid #ccc;
     background-color: #e0f2f1;
@@ -71,12 +72,43 @@ header {
     border-radius: 30px;
 }
 
+.thm {
+    background-color: #f0f0f0;
+    padding: 30px 50px 30px 50px;
+    border: 1px solid #ccc;
+    background-color: rgba(249, 174, 213, 0.196);
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+.proof {
+    background-color: #f0f0f0;
+    padding: 30px 50px 30px 50px;
+    border: 1px solid #ccc;
+    background-color: rgba(174, 249, 174, 0.446);
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+
 .center {
     text-align: center;
+}
+
+.cite {
+    position: absolute;
+    bottom: 30px;
+    font-size: 50%;
 }
 
 .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
-  }
+}
+
+
+.red {
+    color:#ff0000;
+    font-weight: bold;
+}
