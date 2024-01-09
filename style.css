@@ -85,7 +85,7 @@ header {
     background-color: #f0f0f0;
     padding: 30px 50px 30px 50px;
     border: 1px solid #ccc;
-    background-color: rgba(174, 249, 174, 0.446);
+    background-color: rgba(174, 249, 174, 0.243);
     margin-bottom: 20px;
     border-radius: 30px;
 }
@@ -109,6 +109,15 @@ header {
 
 
 .red {
-    color:#ff0000;
+    color: #ff0000;
     font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.green {
+    color: #61bb61;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
 }
