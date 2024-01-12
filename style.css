@@ -5,6 +5,14 @@
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap');
 
+@font-face {
+    font-family: JuliaMono;
+    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.woff2");
+}
+code {
+    font-family: JuliaMono;
+    font-size: 0.8em;
+}
 
 :root {
     --black: #000009;
@@ -42,7 +50,6 @@ section.lead h2 {
     font-size: 1em;
     margin-top: 0.05em;
     font-weight: bold;
-    text-align: cente
 }
 
 section.lead p {
@@ -54,7 +61,7 @@ section::after {
 }
 
 header {
-    font-family: 'M PLUS 1p:wght@700';
+    font-family: 'M PLUS 1p';
     font-weight: bold;
     font-size: 1.5em;
     color: var(--first);
@@ -99,6 +106,9 @@ header {
     position: absolute;
     bottom: 30px;
     font-size: 50%;
+    /* 上に棒 */
+    border-top: solid 1px #7f7f7f;
+    padding-top: 10px;
 }
 
 .columns {
@@ -120,4 +130,17 @@ header {
     font-weight: bold;
     display: inline-block;
     white-space: nowrap;
+}
+
+.gray {
+    color: #808080a5;
+    font-weight: bold;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* 線とか何もひかれないテーブル */
+.empty-table {
+    border-collapse: collapse;
+    border: none;
 }
