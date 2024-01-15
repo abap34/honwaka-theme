@@ -9,10 +9,12 @@
     font-family: JuliaMono;
     src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.woff2");
 }
+
 code {
-    font-family: JuliaMono;
-    font-size: 0.8em;
+    font-family: JuliaMono !important;
+    font-size: 0.8em !important;
 }
+
 
 :root {
     --black: #000009;
@@ -106,7 +108,6 @@ header {
     position: absolute;
     bottom: 30px;
     font-size: 50%;
-    /* 上に棒 */
     border-top: solid 1px #7f7f7f;
     padding-top: 10px;
 }
@@ -139,8 +140,32 @@ header {
     white-space: nowrap;
 }
 
-/* 線とか何もひかれないテーブル */
 .empty-table {
     border-collapse: collapse;
     border: none;
+}
+
+
+.dot-text {
+    -webkit-text-emphasis: filled;
+    text-emphasis: filled;
+    -webkit-text-emphasis-color: #ff9800;
+    text-emphasis-color: #ff9800;
+    -webkit-text-emphasis-style: circle;
+    text-emphasis-style: circle;
+    font-weight: bold;
+}
+
+
+.section {
+    position: absolute;
+    font-family: 'M PLUS 1p';
+    font-size: 0.8em;
+    color: var(--first);
+    top: 30px;
+    right: 30px;
+    border-bottom: 2px solid var(--first);
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-bottom: 0px;
 }
