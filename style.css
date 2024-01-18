@@ -16,6 +16,12 @@ code {
 }
 
 
+img[alt~="center"] {
+    display: block;
+    margin: 0 auto;
+}
+
+
 :root {
     --black: #000009;
     --white: #ffffff;
