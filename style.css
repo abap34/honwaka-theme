@@ -87,7 +87,7 @@ header {
     border-radius: 30px;
 }
 
-.thm {
+.proof {
     background-color: #f0f0f0;
     padding: 30px 50px 30px 50px;
     border: 1px solid #ccc;
@@ -96,7 +96,7 @@ header {
     border-radius: 30px;
 }
 
-.proof {
+.thm {
     background-color: #f0f0f0;
     padding: 30px 50px 30px 50px;
     border: 1px solid #ccc;
