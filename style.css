@@ -175,3 +175,10 @@ header {
     margin-bottom: 0px;
     margin-bottom: 0px;
 }
+
+
+/* マーカーで線が引かれる */
+.lined {
+    background: linear-gradient(transparent 70%, rgba(255, 165, 0, 0.6) 0) no-repeat;
+    display: inline;
+}
