@@ -27,7 +27,7 @@ img[alt~="center"] {
     --white: #ffffff;
     --gray: #808080;
     --first: SteelBlue;
-    --second: #ff0000;
+    --second: #ff9800;
 }
 
 section {
@@ -128,10 +128,12 @@ header {
     padding-top: 10px;
 }
 
+/* 左右2分割レイアウト */
 .columns {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
+    align-items: center;
 }
 
 
