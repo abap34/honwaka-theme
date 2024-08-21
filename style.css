@@ -201,3 +201,77 @@ header {
     display: inline;
     padding: 0px 10px;
 }
+
+
+/* 全体の見出しページ用 */
+.toc {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1000px #f0f8ff;
+    align-items: stretch;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.toc .toc-sec {
+    margin: 10px;
+    box-sizing: border-box;
+     flex: 1 1 calc(30% - 40px); /* 2列に並べる */
+    min-width: 300px; /* 必要に応じて最小幅を設定 */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #f0f8ff; 
+}
+
+.toc .secname {
+    font-size: 0.85em;
+    font-weight: bold;
+}
+
+.toc .content {
+    font-size: 0.7em;
+    text-align: left;
+}
+
+.toc .content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.toc .content ul li::before {
+    content: "▶︎ ";
+    font-size: 0.5em;
+    margin-right: 5px;
+}
+
+/* セクションの見出しページ用 */
+.toc-sec .secname {
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-sec .content {
+    font-size: 1.2em;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-sec ul li {
+    list-style-type: none;
+}
+
+.toc-sec ul li::before {
+    content: "▶︎  ";
+    font-size: 0.5em;
+    margin-right: 5px;   
+}
