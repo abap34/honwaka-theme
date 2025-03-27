@@ -275,3 +275,28 @@ header {
     font-size: 0.5em;
     margin-right: 5px;   
 }
+
+
+/* キャプション付きのコードブロック */
+
+.code-with-caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.code-with-caption .code {
+    margin: 0px;
+    padding: 0px;
+}
+
+.code-with-caption .caption {
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #777;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+}
+
