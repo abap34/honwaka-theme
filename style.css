@@ -10,6 +10,10 @@
     src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.woff2");
 }
 
+html {
+  font-size: 80%;
+}
+
 code {
     font-family: JuliaMono !important;
     font-size: 0.8em !important;
