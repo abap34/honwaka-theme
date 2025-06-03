@@ -1,306 +1,267 @@
 /* @theme honwaka */
-
 @import 'default';
 
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+1p');
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap');
 
 @font-face {
-    font-family: JuliaMono;
-    src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.woff2");
+  font-family: JuliaMono;
+  src: url("https://cdn.jsdelivr.net/gh/cormullion/juliamono/webfonts/JuliaMono.woff2");
+}
+
+/* ---------------------- 変数と基本設定 ---------------------- */
+:root {
+  --black: #000009;
+  --white: #ffffff;
+  --gray: #808080;
+  --first: SteelBlue;
+  --second: #ff9800;
 }
 
 html {
   font-size: 80%;
 }
 
-code {
-    font-family: JuliaMono !important;
-    font-size: 0.8em !important;
+section {
+  font-family: 'M PLUS 1p';
+  color: var(--black);
 }
 
+code {
+  font-family: JuliaMono !important;
+  font-size: 0.8em !important;
+}
 
 img[alt~="center"] {
-    display: block;
-    margin: 0 auto;
+  display: block;
+  margin: 0 auto;
 }
 
-
-:root {
-    --black: #000009;
-    --white: #ffffff;
-    --gray: #808080;
-    --first: SteelBlue;
-    --second: #ff9800;
-}
-
-section {
-    font-family: 'M PLUS 1p';
-    color: var(--black);
-}
-
-h1 {
-    color: black;
-    margin: 0;
-    padding: 0;
-    font-size: 2.5em;
-}
-
-section.lead {
-    color: var(--first);
-}
-
-section.lead h1 {
-    font-size: 2.5em;
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
-    color: var(--first);
-}
-
-section.lead h2 {
-    font-size: 1em;
-    margin-top: 0.05em;
-    font-weight: bold;
-}
-
-section.lead p {
-    text-align: right;
-}
-
+/* ---------------------- ページナビ・ヘッダー・フッター ---------------------- */
 section::after {
-    content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
+  content: attr(data-marpit-pagination) ' / ' attr(data-marpit-pagination-total);
 }
 
 header {
-    font-family: 'M PLUS 1p';
-    font-weight: bold;
-    font-size: 1.5em;
-    color: var(--first);
-    top: 30px;
-    border-bottom: 5px dotted
+  font-family: 'M PLUS 1p';
+  font-weight: bold;
+  font-size: 1.5em;
+  color: var(--first);
+  top: 30px;
+  border-bottom: 5px dotted;
 }
 
-
-
-.def {
-    padding: 0px 50px 20px 50px;
-    border: 1px solid #ccc;
-    background-color: #e0f2f1;
-    margin-bottom: 20px;
-    border-radius: 30px;
-}
-
-.proof {
-    background-color: #f0f0f0;
-    padding: 0px 50px 20px 50px;
-    border: 1px solid #ccc;
-    background-color: rgba(249, 174, 213, 0.196);
-    margin-bottom: 20px;
-    border-radius: 30px;
-}
-
-.thm {
-    background-color: #f0f0f0;
-    padding: 0px 50px 20px 50px;
-    border: 1px solid #ccc;
-    background-color: rgba(174, 249, 174, 0.243);
-    margin-bottom: 20px;
-    border-radius: 30px;
-}
-
-
-.box {
-    padding: 0px 50px 20px 50px;
-    border: 1px solid #ccc;
-    background-color: rgba(255, 255, 255, 0.243);
-    margin-bottom: 20px;
-    border-radius: 30px;
-
-}
-
-
-.center {
-    text-align: center;
+.section {
+  position: absolute;
+  font-size: 0.8em;
+  color: var(--first);
+  top: 30px;
+  right: 30px;
+  border-bottom: 2px solid var(--first);
 }
 
 .cite {
-    position: absolute;
-    bottom: 30px;
-    font-size: 50%;
-    border-top: solid 1px #7f7f7f;
-    padding-top: 10px;
+  position: absolute;
+  bottom: 30px;
+  font-size: 50%;
+  border-top: solid 1px #7f7f7f;
+  padding-top: 10px;
 }
 
-/* 左右2分割レイアウト */
-.columns {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-    align-items: center;
+/* ---------------------- リードスライド・見出し ---------------------- */
+h1 {
+  color: black;
+  margin: 0;
+  padding: 0;
+  font-size: 2.5em;
 }
 
+section.lead {
+  color: var(--first);
+}
+
+section.lead h1 {
+  font-size: 2.5em;
+  font-weight: normal;
+  color: var(--first);
+}
+
+section.lead h2 {
+  font-size: 1em;
+  margin-top: 0.05em;
+  font-weight: bold;
+}
+
+section.lead p {
+  text-align: right;
+}
+
+/* ---------------------- ボックス装飾 ---------------------- */
+.def, .proof, .thm, .box {
+  padding: 0px 50px 20px 50px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+
+.def {
+  background-color: #e0f2f1;
+}
+
+.proof {
+  background-color: rgba(249, 174, 213, 0.196);
+}
+
+.thm {
+  background-color: rgba(174, 249, 174, 0.243);
+}
+
+.box {
+  background-color: rgba(255, 255, 255, 0.243);
+}
+
+/* ---------------------- 色・装飾付きテキスト ---------------------- */
+.red, .green, .gray {
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+}
 
 .red {
-    color: #ff0000;
-    font-weight: bold;
-    display: inline-block;
-    white-space: nowrap;
+  color: #ff0000;
 }
 
 .green {
-    color: #61bb61;
-    font-weight: bold;
-    display: inline-block;
-    white-space: nowrap;
+  color: #61bb61;
 }
 
 .gray {
-    color: #808080a5;
-    font-weight: bold;
-    display: inline-block;
-    white-space: nowrap;
+  color: #808080a5;
 }
 
-.empty-table {
-    border-collapse: collapse;
-    border: none;
+.orangelined {
+  background: linear-gradient(transparent 70%, rgba(255, 165, 0, 0.6) 0) no-repeat;
+  display: inline;
 }
 
+.bluelined {
+  background: #a1d6e89c;
+  display: inline;
+  padding: 0px 10px;
+}
 
 .dot-text {
-    -webkit-text-emphasis: filled;
-    text-emphasis: filled;
-    -webkit-text-emphasis-color: #ff9800;
-    text-emphasis-color: #ff9800;
-    -webkit-text-emphasis-style: circle;
-    text-emphasis-style: circle;
-    font-weight: bold;
+  -webkit-text-emphasis: filled;
+  text-emphasis: filled;
+  -webkit-text-emphasis-color: #ff9800;
+  text-emphasis-color: #ff9800;
+  -webkit-text-emphasis-style: circle;
+  text-emphasis-style: circle;
+  font-weight: bold;
 }
 
-
-.section {
-    position: absolute;
-    font-family: 'M PLUS 1p';
-    font-size: 0.8em;
-    color: var(--first);
-    top: 30px;
-    right: 30px;
-    border-bottom: 2px solid var(--first);
-    padding-bottom: 0px;
-    margin-bottom: 0px;
-    margin-bottom: 0px;
+/* ---------------------- レイアウト ---------------------- */
+.center {
+  text-align: center;
 }
 
-
-/* マーカーで下にオレンジの線を引く */
-.orangelined {
-    background: linear-gradient(transparent 70%, rgba(255, 165, 0, 0.6) 0) no-repeat;
-    display: inline;
+.columns, .columns-3, .columns-4 {
+  display: grid;
+  gap: 1rem;
+  align-items: center;
 }
 
-/* マーカで背景に水色の線を引く */
-.bluelined {
-    background: #a1d6e89c;
-    display: inline;
-    padding: 0px 10px;
+.columns {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.columns-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
-/* 全体の見出しページ用 */
+.columns-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ---------------------- 目次（TOC） ---------------------- */
 .toc {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    margin: 10px;
-    padding: 10px;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    box-sizing: border-box;
-    box-shadow: 0 0 0 1000px #f0f8ff;
-    align-items: stretch;
-    justify-content: space-between;
-    box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 0 0 0 1000px #f0f8ff;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .toc .toc-sec {
-    margin: 10px;
-    box-sizing: border-box;
-     flex: 1 1 calc(30% - 40px); /* 2列に並べる */
-    min-width: 300px; /* 必要に応じて最小幅を設定 */
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #f0f8ff; 
+  flex: 1 1 calc(30% - 40px);
+  min-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  margin: 10px;
 }
 
 .toc .secname {
-    font-size: 0.85em;
-    font-weight: bold;
+  font-size: 0.85em;
+  font-weight: bold;
 }
 
 .toc .content {
-    font-size: 0.7em;
-    text-align: left;
+  font-size: 0.7em;
+  text-align: left;
 }
 
-.toc .content ul {
-    list-style-type: none;
-    padding-left: 0;
+.toc .content ul,
+.toc-sec ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-.toc .content ul li::before {
-    content: "▶︎ ";
-    font-size: 0.5em;
-    margin-right: 5px;
+.toc .content ul li::before,
+.toc-sec ul li::before {
+  content: "▶︎ ";
+  font-size: 0.5em;
+  margin-right: 5px;
 }
 
-/* セクションの見出しページ用 */
 .toc-sec .secname {
-    font-size: 1.4em;
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 .toc-sec .content {
-    font-size: 1.2em;
-    text-align: left;
-    padding: 0;
-    margin: 0;
+  font-size: 1.2em;
+  text-align: left;
 }
 
-.toc-sec ul li {
-    list-style-type: none;
-}
-
-.toc-sec ul li::before {
-    content: "▶︎  ";
-    font-size: 0.5em;
-    margin-right: 5px;   
-}
-
-
-/* キャプション付きのコードブロック */
-
+/* ---------------------- コード + キャプション ---------------------- */
 .code-with-caption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .code-with-caption .code {
-    margin: 0px;
-    padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .code-with-caption .caption {
-    font-size: 0.8em;
-    font-weight: bold;
-    color: #777;
-    text-align: center;
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #777;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* ---------------------- テーブル ---------------------- */
+.empty-table {
+  border-collapse: collapse;
+  border: none;
+}
